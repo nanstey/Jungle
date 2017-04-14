@@ -27,8 +27,8 @@
 
     <div class="row">
       <div class="col-sm-8">
-        <% @product.reviews.each do |review| %>
-          <%= render 'review', review: review %>
+        <% @reviews.each do |review| %>
+          <%= render review %>
         <% end %>
       </div>
     </div>

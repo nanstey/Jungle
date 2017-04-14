@@ -136,14 +136,14 @@ cat3.products.create!({
 
 # puts "Recreating users ..."
 
-# User.destroy_all
+User.destroy_all
 
-# User.create!({
-#   first_name: Noel,
-#   last_name: Anstey,
-#   email: anstey.ng@gmail.com
-#   password_digest: ????
-#   })
+User.create!({
+  first_name: 'Noel',
+  last_name: 'Anstey',
+  email: 'anstey.ng@gmail.com',
+  password_digest: '$2a$10$JgbQ.3iulQdwdb1NO5iaKukiCIP67umPjXqrueCH3.C9/kx.eeim2'
+})
 
 # Reviews
 
