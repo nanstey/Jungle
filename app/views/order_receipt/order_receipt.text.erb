@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  Hello <%= @user.first_name %>,
+
+  Your order has been received!
+
+
+  <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Unit Price</th>
+      <th>Quantity</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @order_total = 0 %>
+    <% @order.line_items.each do |item| %>
+      <%= render 'item', item: item %>
+    <% end %>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th colspan="4">
+        TOTAL:
+      </th>
+      <th>
+        <%= humanized_money_with_symbol @order_total %>
+      </th>
+    </tr>
+  </tfoot>
+</table>
+<br><br>
+
+Thanks for your business!
+
+From the Jungle, with love.
+
+<br>
+</body>
+</html>
