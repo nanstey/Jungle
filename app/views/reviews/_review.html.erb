@@ -1,8 +1,13 @@
 <div class="review">
-  <h4><%= review.user.first_name %></h4>
   <span class="rating">
-    <%= review.rating %>
+    <% (review.rating).times do |i| %>
+      <i class="fa fa-star"></i>
+    <% end %>
+    <% (5 - review.rating).times do |i| %>
+      <i class="fa fa-star-o"></i>
+    <% end %>
   </span>
+  <h4><%= review.user.first_name %></h4>
   <div class="review-description">
     <p><%= review.description %></p>
   </div>

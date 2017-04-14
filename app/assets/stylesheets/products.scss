@@ -82,6 +82,21 @@ main section.products-show {
       max-width: 100%;
     }
   }
+
+  .review {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+  }
+
+  .rating {
+    float: right;
+    display: inline;
+    position: relative;
+    top: 10px;
+    color: #337ab7;
+  }
 }
 
 
