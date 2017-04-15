@@ -78,6 +78,9 @@ main section.categories-show {
 main section.products-show {
 
   .product-detail {
+
+    margin-bottom: 40px;
+
     img.main-img {
       max-width: 100%;
     }
@@ -96,6 +99,11 @@ main section.products-show {
     position: relative;
     top: 10px;
     color: #337ab7;
+  }
+
+  .review-form {
+    margin-top: 40px;
+    padding: 15px;
   }
 }
 

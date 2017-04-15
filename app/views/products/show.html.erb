@@ -36,11 +36,11 @@
             <%= f.label :description %>
             <%= f.text_area :description, class: 'form-control' %>
           </div>
-          <%= f.submit 'Signup', class: 'btn btn-primary' %>
+          <%= f.submit 'Submit review', class: 'btn btn-primary' %>
         <% end %>
       </div>
       <div class="product-reviews">
-        <% @reviews.each do |review| %>
+        <% @reviews.reverse.each do |review| %>
           <%= render review %>
         <% end %>
       </div>
