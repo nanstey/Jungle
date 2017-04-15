@@ -25,5 +25,19 @@
     <aside class="sold-out">
       SOLD OUT!
     </aside>
+  <% else %>
+    <aside class="average-rating">
+      <% rating = Review.where(product_id: product).average(:rating).to_i %>
+      <% if rating == 0 %>
+        No ratings
+      <% else %>
+        <% (rating).times do |i| %>
+          <i class="fa fa-star"></i>
+        <% end %>
+        <% (5 - rating).times do |i| %>
+          <i class="fa fa-star-o"></i>
+        <% end %>
+      <% end %>
+    </aside>
   <% end %>
 </article>

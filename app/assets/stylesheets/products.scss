@@ -6,6 +6,7 @@ main section.categories-show {
     flex-direction:  row;
     flex-wrap:       wrap;
     justify-content: space-around;
+    margin-bottom: 40px;
 
     .product {
       // flex:      1;
@@ -25,6 +26,7 @@ main section.categories-show {
         max-height: 140px;
         margin: auto;
         display: block;
+        margin-top: 25px;
       }
 
       footer {
@@ -71,6 +73,10 @@ main section.categories-show {
         }
       }
 
+      .average-rating {
+        color: #337ab7;
+      }
+
     }
   }
 }
@@ -93,10 +99,17 @@ main section.products-show {
     margin-top: 20px;
   }
 
+  .trash {
+    float: right;
+    position: relative;
+    top: 10px;
+  }
+
   .rating {
     float: right;
     display: inline;
     position: relative;
+    margin-right: 20px;
     top: 10px;
     color: #337ab7;
   }

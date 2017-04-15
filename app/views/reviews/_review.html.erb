@@ -1,4 +1,9 @@
 <div class="review">
+  <% if current_user && current_user.id == review.user_id %>
+    <span class="trash" >
+      <%= link_to '', review_path(review.id), method: "delete", class: "fa fa-trash" %>
+    </span>
+  <% end %>
   <span class="rating">
     <% (review.rating).times do |i| %>
       <i class="fa fa-star"></i>

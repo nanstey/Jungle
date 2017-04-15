@@ -1,5 +1,7 @@
 class ReviewsController < ApplicationController
 
+  before_filter
+
   def create
     review = Review.new(review_params)
     review.user_id = session[:user_id]
@@ -12,12 +14,17 @@ class ReviewsController < ApplicationController
     params.require(:review).permit(:rating, :description)
   end
 
-  def product_id
-    params.permit(:product_id)
+  def destroy
+    review = Review.find(review_id)
+    product_id = review.product_id
+    if review.user_id == session[:user_id]
+      review.destroy
+    end
+    redirect_to product_path(product_id)
   end
 
-  def current_user
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+  def review_id
+    params.require(:id)
   end
 
 
