@@ -6,6 +6,7 @@ main section.categories-show {
     flex-direction:  row;
     flex-wrap:       wrap;
     justify-content: space-around;
+    margin-bottom: 40px;
 
     .product {
       // flex:      1;
@@ -25,6 +26,7 @@ main section.categories-show {
         max-height: 140px;
         margin: auto;
         display: block;
+        margin-top: 25px;
       }
 
       footer {
@@ -71,6 +73,10 @@ main section.categories-show {
         }
       }
 
+      .average-rating {
+        color: #337ab7;
+      }
+
     }
   }
 }
@@ -78,9 +84,39 @@ main section.categories-show {
 main section.products-show {
 
   .product-detail {
+
+    margin-bottom: 40px;
+
     img.main-img {
       max-width: 100%;
     }
+  }
+
+  .review {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 20px;
+  }
+
+  .trash {
+    float: right;
+    position: relative;
+    top: 10px;
+  }
+
+  .rating {
+    float: right;
+    display: inline;
+    position: relative;
+    margin-right: 20px;
+    top: 10px;
+    color: #337ab7;
+  }
+
+  .review-form {
+    margin-top: 40px;
+    padding: 15px;
   }
 }
 
