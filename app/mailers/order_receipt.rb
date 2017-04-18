@@ -6,12 +6,12 @@ class OrderReceipt < ApplicationMailer
     @order = order
     @user = user
     @greeting = "Order received!"
-    mg_client = Mailgun::Client.new Rails.application.secrets.mailgun_api_key
+    mg_client = Mailgun::Client.new ENV['MAILGUN_API_KEY']
     message_params = {:from    => "no-reply@jungle.com",
                       :to      => email,
                       :subject => "Jungle Shopping - Order ##{@order.id}",
                       :html => (render_to_string(template: "../views/order_receipt/order_receipt")).to_str}
-    mg_client.send_message Rails.application.secrets.mailgun_domain, message_params
+    mg_client.send_message ENV['MAILGUN_DOMAIN'], message_params
   end
 
 end
